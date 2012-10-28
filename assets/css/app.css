@@ -33,7 +33,7 @@
   color: orange;
 }
 
-.icon-sun {
+.icon-sun, .temp {
   font-size: 96px;
   line-height: 96px;
   font-weight: bold;
