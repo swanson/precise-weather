@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Most Precise Weather</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
+      rel="stylesheet" type="text/css">
+
+    <script src="http://j.maxmind.com/app/geoip.js" type="text/javascript" ></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div id="main">
+            <h1>The Most Precise<a href="http://en.wikipedia.org/wiki/Accuracy_and_precision">*</a>
+            Weather Forecast. Ever.</h1>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div class="forecast large">
+            <h2>Current Weather in 
+            <span class="city"><script>document.write(geoip_city());</script></span></h2>
+            <span aria-hidden="true" class="icon-sun">72&deg;</span>
+            <h3>Sunny with a chance for rain</h3>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div class="forecast small">
+            <h2>Tomorrow</h2>
+            <span aria-hidden="true" class="icon-sun">72&deg;</span>
+            <h3>Sunny with a chance for rain</h3>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div class="forecast small">
+            <h2>Next Year</h2>
+            <span aria-hidden="true" class="icon-sun">72&deg;</span>
+            <h3>Sunny with a chance for rain</h3>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <p class="pull-left">
+            GeoIP courtesy of <a href="http://www.maxmind.com/app/javascript">MaxMind</a>
+          </p>
+          <p class="pull-right">Made with <span style="color:orange">♥</span> by <a href="http://swanson.github.com">Matt Swanson</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

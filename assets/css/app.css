@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'meteocons';
+  src:url('/assets/fonts/meteocons.eot');
+  src:url('/assets/fonts/meteocons.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/meteocons.svg#meteocons') format('svg'),
+    url('/assets/fonts/meteocons.woff') format('woff'),
+    url('/assets/fonts/meteocons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'meteocons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'meteocons';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  display: inline;
+}
+
+.icon-sun:before {
+  content: "\21";
+  color: orange;
+}
+
+.icon-sun {
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: bold;
+}
+
+body {
+  margin-top: 20px;
+  font-family: "open sans", sans-serif;
+}
+
+#main h1 {
+	font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+	text-align: center;
+  margin-bottom: 10px;
+}
+
+#main h1 a {
+	font-size: 24px;
+	font-weight: normal;
+	vertical-align: top;
+  position: relative;
+  top: -10px;
+  color: orange;
+}
+
+#main h1 a:hover {
+  text-decoration: none;
+}
+
+#main span {
+  font-size: 96px;
+}
+
+#main h2 {
+  font-weight: normal;
+	font-size: 34px;
+  line-height: 48px;
+	text-align: center;
+  margin-bottom: 10px;
+}
+
+.forecast {
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a {
+  color: orange;
+}
+
+a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+.city {
+  border: 1px dashed #333;
+  background-color: whiteSmoke;
+  color: orange;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.pull-right a, .pull-left a {
+  border-bottom: 1px dotted orange;
+}
