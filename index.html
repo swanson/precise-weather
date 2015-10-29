@@ -9,8 +9,9 @@
     <link href="/assets/css/app.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
       rel="stylesheet" type="text/css">
+    <link rel="icon" href="/asset/img/sun.png">
 
-    <script src="http://j.maxmind.com/app/geoip.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,7 +33,7 @@
         <div class="span12">
           <div class="forecast large">
             <h2>Current Weather in 
-            <span class="city"><script>document.write(geoip_city());</script></span></h2>
+            <span class="city">loading...</span></h2>
             <img src="/assets/img/sun.png" /><span class="temp">72&deg;</span>
             <h3>Sunny with a chance for rain</h3>
             <hr />
@@ -62,11 +63,21 @@
       <div class="row">
         <div class="span12">
           <p class="pull-left">
-            GeoIP courtesy of <a href="http://www.maxmind.com/app/javascript">MaxMind</a>
+            GeoIP courtesy of <a href="https://freegeoip.net/">freegeoip.net</a>
           </p>
           <p class="pull-right">Made with <span style="color:orange">♥</span> by <a href="http://swanson.github.com">Matt Swanson</a></p>
         </div>
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.ajax({
+        url: "https://freegeoip.net/json"
+      }).done(function (data) {
+        $(".city").text(data.city);
+      });
+
+    });
+  </script>
 </html>
